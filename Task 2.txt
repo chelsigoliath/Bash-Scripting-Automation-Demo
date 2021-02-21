@@ -1,0 +1,55 @@
+Last login: Sat Feb 20 23:33:55 2021 from 10.0.2.2
+vagrant@vagrant-ubuntu-trusty-64:~$ cd C:\Users\CAU Student\Desktop\Git Demo
+-bash: cd: C:UsersCAU: No such file or directory
+vagrant@vagrant-ubuntu-trusty-64:~$ cd /mnt/c/Users/CAU Student/Desktop/Git Demo
+-bash: cd: /mnt/c/Users/CAU: No such file or directory
+vagrant@vagrant-ubuntu-trusty-64:~$  /mnt/c/Users/CAU Student/Desktop/Git Demo
+-bash: /mnt/c/Users/CAU: No such file or directory
+vagrant@vagrant-ubuntu-trusty-64:~$  git config --global user.name "chelsigoliath"
+vagrant@vagrant-ubuntu-trusty-64:~$ git config --global user.email "chelsig2@gmail.com"
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+Git
+vagrant@vagrant-ubuntu-trusty-64:~$ cd Git/
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ echo "# Bash-Scripting-Automation-Demo" >> README.md
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ git init
+Reinitialized existing Git repository in /home/vagrant/Git/.git/
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ git add README.md
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ git commit -m "first commit for demo"
+[master (root-commit) 2db9ae4] first commit for demo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ git remote add origin https://github.com/chelsigoliath/Bash-Scripting-Automation-Demo.git
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ git push -u origin master
+Username for 'https://github.com': chelsigoliath
+Password for 'https://chelsigoliath@github.com':
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 249 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/chelsigoliath/Bash-Scripting-Automation-Demo/pull/new/master
+remote:
+To https://github.com/chelsigoliath/Bash-Scripting-Automation-Demo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ nano anotherdemo.txt
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ ls
+anotherdemo.txt  README.md
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ git add anotherdemo.txt
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ git commit -m "I added anotherdemo.txt"
+[master 85a88ed] I added anotherdemo.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 anotherdemo.txt
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ git remote add origin https://github.com/chelsigoliath/Bash-Scripting-Automation-Demo.git
+fatal: remote origin already exists.
+vagrant@vagrant-ubuntu-trusty-64:~/Git$ git push -u origin master
+Username for 'https://github.com': chelsigoliath
+Password for 'https://chelsigoliath@github.com':
+Counting objects: 4, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 335 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/chelsigoliath/Bash-Scripting-Automation-Demo.git
+   2db9ae4..85a88ed  master -> master
+Branch master set up to track remote branch master from origin.
+vagrant@vagrant-ubuntu-trusty-64:~/Git$
